@@ -1,0 +1,34 @@
+{
+    "tabs": [
+        {
+            "id": "0",
+            "label": "flights",
+            "icon": "",
+            "url": "/flights"
+        },
+        {
+            "id": "1",
+            "label": "hotels",
+            "icon": "",
+            "url": "/hotels"
+        },
+        {
+            "id": "2",
+            "label": "cars",
+            "icon": "",
+            "url": "/cars"
+        },
+        {
+            "id": "3",
+            "label": "trains",
+            "icon": "",
+            "url": "/trains"
+        },
+        {
+            "id": "4",
+            "label": "buses",
+            "icon": "",
+            "url": "/buses"
+        }
+    ]
+}

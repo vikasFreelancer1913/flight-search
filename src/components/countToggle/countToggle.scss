@@ -1,0 +1,37 @@
+.countToggleWrap {
+    button, span {
+        width: 22px;
+        height: 22px;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        line-height: 22px;
+    }
+    span {
+        margin: 0 3px;
+    }
+    button {
+        padding: 0;
+        border-radius: 50%;
+        outline: none;
+        font-size: 20px;
+        box-shadow: none;
+        position: relative;
+        border: 1px solid $ligh-grey-ccc;
+        cursor: pointer;
+        background: $white;
+        &:before {
+            position: absolute;
+            top: -2px;
+            font-size: 22px;
+            left: 4px;
+        }
+        &.minus:before {
+            content: '-';
+            left: 7px;
+        }
+        &.plus:before {
+            content: '+';
+        }
+    }
+}

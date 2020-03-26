@@ -1,0 +1,32 @@
+.navigationWrap {
+    max-height: 42px;
+    overflow-y: hidden;
+    ul {
+        margin: 0 0 10px;
+        list-style: none;
+        padding: 0;
+        white-space: nowrap;
+        overflow-x: auto;
+        li {
+            display: inline-block;
+            width: 90px;
+            margin: 0 0 15px 3px;
+            text-align: center;
+            &:first-child {
+                margin-left: 0;
+            }
+            a {
+                display: block;
+                padding: 10px;
+                text-decoration: none;
+                color: $light-grey;
+                border-bottom: 2px solid $light-grey;
+                text-transform: capitalize;
+                &.active {
+                    color: $primary-blue;
+                    border-bottom-color: $primary-blue
+                }
+            }
+        }
+    }
+}

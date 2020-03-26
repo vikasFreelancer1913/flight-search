@@ -1,0 +1,260 @@
+.flightSearchResult {
+    position: fixed;
+    transition: all 0.3s ease-in-out;
+    background: $lightWhiteBg;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    right: -100vw;
+    top: 0;
+    &.show {
+        right: 0;
+    }
+
+    .resultHeader {
+        padding: 10px;
+        background: $primary-blue;
+        color: $white;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .titleWrap {
+            text-align: center;
+            .datePassengerWrap {
+                font-size: 12px;
+                margin-left: -2px;
+            }
+        }
+        p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 18px;
+            span, svg {
+                display: inline-block;
+                vertical-align: top;
+                margin-left: 3px;
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+            svg {
+                margin-top: -1px;
+                font-size: 20px;
+            }
+        }
+        button {
+            color: $white;
+            font-size: 20px;
+            width: 30px;
+            height: 30px;
+            padding: 0;
+            line-height: 32px;
+            background: none;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            cursor: pointer;
+            &:first-child {
+                font-size: 32px;
+                svg {
+                    margin-top: -3px;
+                }
+            }
+        }
+    }
+
+    .flightDetailsWrap {
+        margin-top: 50px;
+        padding-bottom: 180px;
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+
+    .sortingAndFilter {
+        .sortingFilterWrap {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+            button {
+                width: 50%;
+                display: inline-block;
+                vertical-align: top;
+                padding: 10px;
+                background: $white;
+                outline: none;
+                font-size: 16px;
+                color: $primary-blue;
+                box-shadow: none;
+                border: 1px solid $light-grey;
+                border-radius: 5px;
+                &:nth-child(1) {
+                    border-right-width: 0;
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+                &:nth-child(2) {
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                }
+            }
+        }
+        .sortingWrap {
+            position: fixed;
+            height: 100%;
+            top: 0;
+            left: -100vw;
+            background: $white;
+            width: 100%;
+            z-index: 1;
+            transition: all 0.3s ease-in-out;
+            &.show {
+                left: 0;
+            }
+            .resultHeader {
+                p {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+            ul {
+                margin: 50px 0 0 0;
+                padding: 20px;
+                list-style: none;
+                li {
+                    display: block;
+                    margin-bottom: 40px;
+                    label {
+                        input {
+                            margin: 0 10px 0 0;
+                            width: 20px;
+                            height: 20px;
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+
+            button.btn {
+                position: absolute;
+                bottom: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 90%;
+            }
+
+            .filterWrap {
+                margin-top: 50px;
+                h3 {
+                    margin: 10px 0 5px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    padding-bottom: 5px;
+                    border-bottom: 1px solid $light-grey;
+                }
+                .inputBox {
+                    display: flex;
+                    justify-content: space-between;
+                    .control {
+                        position: relative;
+                        width: 45%;
+                        i {
+                            font-size: 14px;
+                            position: absolute;
+                            left: 11px;
+                            top: 29px;
+                            z-index: 1;
+                        }
+                        label {
+                            font-size: 12px;
+                            background: $white;
+                            top: 7px;
+                            position: relative;
+                            z-index: 1;
+                            left: 15px;
+                        }
+                        input {
+                            padding: 10px 10px 10px 30px;
+                            width: 100%;
+                            border-radius: 5px;
+                            box-shadow: none;
+                            outline: none;
+                            font-size: 11px;
+                            border: 1px solid $light-grey;
+                            text-align: left;
+                            background: $white;
+                        }
+                    }
+                }
+                .slider {
+                    width: 100%;
+                    margin-top: 30px;
+                }
+                .priceFilter, .classFilter {
+                    padding: 10px 20px;
+                }
+                .classFilter {
+                    margin: 40px 0 20px 0;
+                    border-bottom: 8px solid #f3f3f3;
+                    padding-bottom: 22px;
+                    border-top: 8px solid $lightWhiteBg;
+                    .controlGroup {
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 14px;
+                        margin-top: 10px;
+                        label {
+                            input {
+                                margin-right: 10px;
+                                width: 20px;
+                                height: 20px;
+                                display: inline-block;
+                                vertical-align: middle;
+                                margin-top: 0;
+                            }
+                            span {
+                                display: inline-block;
+                                vertical-align: middle;
+                            }
+                        }
+                        p {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+
+            .action {
+                position: absolute;
+                width: 100%;
+                left: 0;
+                bottom: 20px;
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+                button.btn {
+                    width: 45%;
+                    bottom: 0;
+                    left: auto;
+                    position: relative;
+                    transform: translateX(0);
+                    font-size: 16px;
+                    &:nth-child(1) {
+                        left: 0;
+                    }
+                    &:nth-child(2) {
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

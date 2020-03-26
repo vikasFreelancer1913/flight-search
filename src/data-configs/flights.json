@@ -1,0 +1,174 @@
+{
+    "flights": [
+        {   
+            "id": "0",
+            "flight": "Indigo airways",
+            "logo": "https://seekvectorlogo.com/wp-content/uploads/2018/05/indigo-vector-logo.png",
+            "times": {
+                "depart": "13.15",
+                "arrive": "15.00"
+            },
+            "stop": "N",
+            "price": {
+                "type": [
+                    {
+                        "name": "economy",
+                        "price": "1200",
+                        "availabelSeats": "15"
+                    },
+                    {
+                        "name": "business",
+                        "price": "4200",
+                        "availabelSeats": "5"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "1",
+            "flight": "Air India",
+            "logo": "https://logos-download.com/wp-content/uploads/2016/04/Air_India_logo_logotype_emblem.png",
+            "times": {
+                "depart": "04.15",
+                "arrive": "11.00"
+            },
+            "stop": {
+                "count": "2",
+                "time": "2 hr"
+            },
+            "price": {
+                "type": [
+                    {
+                        "name": "economy",
+                        "price": "1000",
+                        "availabelSeats": "45"
+                    },
+                    {
+                        "name": "business",
+                        "price": "3800",
+                        "availabelSeats": "25"
+                    },
+                    {
+                        "name": "premium economy",
+                        "price": "1800",
+                        "availabelSeats": "3"
+                    },
+                    {
+                        "name": "first class",
+                        "price": "5500",
+                        "availabelSeats": "10"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "2",
+            "flight": "Spice Jet",
+            "logo": "https://pngimage.net/wp-content/uploads/2018/06/spicejet-logo-png-4.png",
+            "times": {
+                "depart": "19.00",
+                "arrive": "21.45"
+            },
+            "stop": "N",
+            "price": {
+                "type": [
+                    {
+                        "name": "economy",
+                        "price": "1800",
+                        "availabelSeats": "20"
+                    },
+                    {
+                        "name": "premium economy",
+                        "price": "2200",
+                        "availabelSeats": "1"
+                    }
+                ]
+            }
+        },
+        {   
+            "id": "3",
+            "flight": "Indigo airways",
+            "logo": "https://seekvectorlogo.com/wp-content/uploads/2018/05/indigo-vector-logo.png",
+            "times": {
+                "depart": "13.15",
+                "arrive": "15.00"
+            },
+            "stop": "N",
+            "price": {
+                "type": [
+                    {
+                        "name": "economy",
+                        "price": "1200",
+                        "availabelSeats": "15"
+                    },
+                    {
+                        "name": "business",
+                        "price": "4200",
+                        "availabelSeats": "5"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "4",
+            "flight": "Air India",
+            "logo": "https://logos-download.com/wp-content/uploads/2016/04/Air_India_logo_logotype_emblem.png",
+            "times": {
+                "depart": "04.15",
+                "arrive": "11.00"
+            },
+            "stop": {
+                "count": "2",
+                "time": "2 hr"
+            },
+            "price": {
+                "type": [
+                    {
+                        "name": "economy",
+                        "price": "1000",
+                        "availabelSeats": "45"
+                    },
+                    {
+                        "name": "business",
+                        "price": "3800",
+                        "availabelSeats": "25"
+                    },
+                    {
+                        "name": "premium economy",
+                        "price": "1800",
+                        "availabelSeats": "3"
+                    },
+                    {
+                        "name": "first class",
+                        "price": "5500",
+                        "availabelSeats": "10"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "5",
+            "flight": "Spice Jet",
+            "logo": "https://pngimage.net/wp-content/uploads/2018/06/spicejet-logo-png-4.png",
+            "times": {
+                "depart": "19.00",
+                "arrive": "21.45"
+            },
+            "stop": "N",
+            "price": {
+                "type": [
+                    {
+                        "name": "economy",
+                        "price": "1800",
+                        "availabelSeats": "20"
+                    },
+                    {
+                        "name": "premium economy",
+                        "price": "2200",
+                        "availabelSeats": "1"
+                    }
+                ]
+            }
+        }
+    ]
+}
