@@ -10,6 +10,7 @@ import { onSearchInputEnter } from '../../actions/flight-search-action';
 import CountToggle from '../../components/countToggle';
 import moment from 'moment';
 import FlightResults from '../flight-result';
+import Modal from '../../components/modal';
 
 class Flights extends React.Component {
     constructor(props) {
@@ -31,6 +32,9 @@ class Flights extends React.Component {
             showCounterBox: 'close',
             airlineClass: 'economy',
             dataSubmit: false, 
+            errorModal: false,
+            errorMessage: '',
+            errorTitle: '',
             class: [
                 {value: 'economy', label: 'Economy'},
                 {value: 'peconomy', label: 'Premium Economy'},
@@ -53,6 +57,11 @@ class Flights extends React.Component {
         this.checkFormValidation = this.checkFormValidation.bind(this);
         this.submitFlightDetails = this.submitFlightDetails.bind(this);
         this.toggleResultView = this.toggleResultView.bind(this);
+        this.modalClose = this.modalClose.bind(this);
+    }
+
+    modalClose() {
+        this.setState({ errorModal: false });
     }
 
     selectDepartAirport(value) {
@@ -140,7 +149,13 @@ class Flights extends React.Component {
     }
 
     checkFormValidation() {
-        if (this.state.departAirport && this.state.destinationAirport && this.state.departUTCDate && (this.state.adultCount || this.state.childCount || this.state.infantCount)) {
+        if (this.state.departAirport === this.state.destinationAirport) {
+            this.setState({
+                errorModal: true,
+                errorTitle: 'Search filter error!',
+                errorMessage: 'Departure and Destination location cannot be same!'
+            });
+        } else if (this.state.departAirport && this.state.destinationAirport && this.state.departUTCDate && (this.state.adultCount || this.state.childCount || this.state.infantCount)) {
             this.setState({
                 isFieldsEmpty: false
             });
@@ -180,6 +195,7 @@ class Flights extends React.Component {
     render() {
         return (
             <section className="paddingTop50">
+                {this.state.errorModal && <Modal title={this.state.errorTitle} message={this.state.errorMessage} closeModal={this.modalClose}/>}
                 <Header />
                 <Navigation menu={tabs} active={this.state.pathName}/>
                 <section className="innerWrap">

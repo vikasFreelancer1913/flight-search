@@ -1,0 +1,62 @@
+.modalWrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 24;
+    .modalInner {
+        width: 80%;
+        min-height: 100px;
+        padding: 20px;
+        background: $white;
+        top: 50%;
+        left: 50%;
+        border-radius: 5px;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        button {
+            width: 22px;
+            height: 22px;
+            background: none;
+            box-shadow: none;
+            cursor: pointer;
+            border: none;
+            position: absolute;
+            right: 10px;
+            outline: none;
+            top: 10px;
+            &:before, &:after {
+                content: '';
+                width: 100%;
+                height: 2px;
+                top: 10px;
+                left: 0;
+                background: $medium-grey;
+                position: absolute;
+            }
+            &:before {
+                transform: rotate(45deg);
+            }
+            &:after {
+                transform: rotate(-45deg);
+            }
+        }
+        h3 {
+            font-weight: 400;
+            font-size: 16px;
+            margin: 0 0 10px;
+            text-align: center;
+            color: $primary-error-color;
+            padding: 0 10px;
+        }
+
+        p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 18px;
+            color: $medium-grey;
+        }
+    }
+}
