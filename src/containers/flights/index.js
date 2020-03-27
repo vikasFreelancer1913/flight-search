@@ -155,7 +155,7 @@ class Flights extends React.Component {
                 errorTitle: 'Search filter error!',
                 errorMessage: 'Departure and Destination location cannot be same!'
             });
-        } else if (this.state.departAirport && this.state.destinationAirport && this.state.departUTCDate && (this.state.adultCount || this.state.childCount || this.state.infantCount)) {
+        } else if (this.state.departAirport && this.state.destinationAirport && ((this.state.departUTCDate && !this.state.departUTCDate.includes('Invalid')) || (this.state.returnDateUTCDate && !this.state.departUTCDate.includes('Invalid'))) && (this.state.adultCount || this.state.childCount || this.state.infantCount)) {
             this.setState({
                 isFieldsEmpty: false
             });
